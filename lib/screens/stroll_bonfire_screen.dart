@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:stroll_ui/providers/provider.dart';
-import 'package:phosphor_flutter/phosphor_flutter.dart';
-// lib/screens/stroll_bonfire_screen.dart
 
 class StrollBonfireScreen extends StatelessWidget {
-  const StrollBonfireScreen({super.key});
+  const StrollBonfireScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // you can Access the TimeProvider using  this context below
     final timeProvider = Provider.of<TimeProvider>(context);
 
     return Scaffold(
@@ -22,7 +20,7 @@ class StrollBonfireScreen extends StatelessWidget {
             fit: BoxFit.cover,
           ),
 
-          // Gradient Overlay for the dark effect i saw in the design
+          // Gradient Overlay
           Positioned.fill(
             child: DecoratedBox(
               decoration: BoxDecoration(
@@ -46,7 +44,7 @@ class StrollBonfireScreen extends StatelessWidget {
               children: [
                 const SizedBox(height: 20),
 
-                // Title with dropdown arrow beside the text i saw in the design
+                // Title with dropdown arrow
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -59,8 +57,8 @@ class StrollBonfireScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 8),
-                    PhosphorIcon(
-                      PhosphorIcons.caretDown as IconData,
+                    Icon(
+                      LineIcons.angleDown, // Changed icon
                       color: Colors.purple[400],
                       size: 24,
                     ),
@@ -78,8 +76,12 @@ class StrollBonfireScreen extends StatelessWidget {
                       // Time Display
                       Row(
                         children: [
+                          const Icon(
+                            LineIcons.clock, // Changed icon
+                            color: Colors.white,
+                            size: 20,
+                          ),
                           const SizedBox(width: 4),
-                          // Using the time from our provider
                           Text(
                             timeProvider.currentTime,
                             style: const TextStyle(
@@ -93,15 +95,15 @@ class StrollBonfireScreen extends StatelessWidget {
                       const SizedBox(width: 24),
 
                       // Participants Count
-                      Row(
+                      const Row(
                         children: [
-                          PhosphorIcon(
-                            PhosphorIcons.users as IconData,
+                          Icon(
+                            LineIcons.users, // Changed icon
                             color: Colors.white,
                             size: 20,
                           ),
-                          const SizedBox(width: 4),
-                          const Text(
+                          SizedBox(width: 4),
+                          Text(
                             '103',
                             style: TextStyle(
                               color: Colors.white,
