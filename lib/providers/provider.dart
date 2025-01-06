@@ -1,7 +1,7 @@
-// lib/providers/providers.dart
-import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+// lib/providers/providers.dart
 
 /// Provider class to manage the time state for the Stroll Bonfire screen
 class TimeProvider extends ChangeNotifier {
