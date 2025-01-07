@@ -258,13 +258,13 @@ class StrollBonfireScreen extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: Row(
         children: [
-          Column(
+          const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 'Pick your options',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.grey,
                   fontSize: 12,
                   fontWeight: FontWeight.bold,
                 ),
@@ -272,7 +272,7 @@ class StrollBonfireScreen extends StatelessWidget {
               Text(
                 'see who has a similar mind',
                 style: TextStyle(
-                  color: Colors.purple.shade100,
+                  color: Colors.grey,
                   fontSize: 12,
                 ),
               ),

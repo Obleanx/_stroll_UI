@@ -16,6 +16,7 @@ class CircleIcon extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
+        //color: Colors.purple.shade100,
         border: Border.all(
           color: color,
           width: 2,

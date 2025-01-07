@@ -30,8 +30,8 @@ class CustomBottomNavBar extends StatelessWidget {
                 top: 0,
                 child: Container(
                   padding: const EdgeInsets.all(4),
-                  decoration: BoxDecoration(
-                    color: Colors.purple.shade100,
+                  decoration: const BoxDecoration(
+                    color: Color.fromARGB(255, 153, 138, 194),
                     shape: BoxShape.circle,
                   ),
                   constraints: const BoxConstraints(
@@ -44,34 +44,32 @@ class CustomBottomNavBar extends StatelessWidget {
           ),
           Stack(
             children: [
-              const Icon(
-                Icons.chat_bubble_outline,
-                size: 30,
-                color: Colors.white,
-              ),
-              Positioned(
-                right: -7,
-                top: -7,
-                child: Container(
-                  padding: const EdgeInsets.all(6),
-                  decoration: BoxDecoration(
-                    color: Colors.purple.shade100,
-                    shape: BoxShape.circle,
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Icon(
+                    Icons.chat_bubble_outline,
+                    size: 30,
+                    color: Colors.white,
                   ),
-                  constraints: const BoxConstraints(
-                    minWidth: 18,
-                    minHeight: 10,
-                  ),
-                  child: const Center(
-                    child: Text(
-                      '100',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 8,
+                  Container(
+                    height: 10,
+                    width: 15,
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 153, 138, 194),
+                        shape: BoxShape.rectangle,
+                        borderRadius: BorderRadius.circular(3)),
+                    child: const Center(
+                      child: Text(
+                        '100',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 6,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
-                ),
+                ],
               ),
             ],
           ),
