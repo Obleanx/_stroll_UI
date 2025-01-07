@@ -39,6 +39,7 @@ dependencies:
   provider: ^6.1.2
   phosphor_flutter: ^2.1.0
   line_icons: ^2.0.3
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
